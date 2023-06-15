@@ -21,8 +21,8 @@
               </button>
             </template>
         </div>
-        
-        <Dropdown>
+
+      <Dropdown v-if="userHasAnyOptions || actions.filter(action => action.showInDropdown).length > 0">
         <span class="sr-only">{{ __('Resource Row Dropdown') }}</span>
         <DropdownTrigger
             :dusk="`${resource.id.value}-control-selector`"
